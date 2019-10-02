@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Grid, Button } from '@material-ui/core';
-import FilterListIcon from '@material-ui/icons/FilterList';
-
-import { Search, Filter, DateSelector } from './components';
-import AddSummeryBtn from './components/AddSummery/AddSummeryBtn'
+import CommentSummery from './CommentSummery';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,11 +11,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: 'wrap'
-  },
-  search: {
-    flexGrow: 1,
-    maxWidth: 480,
-    flexBasis: 480
   },
   filterButton: {
     marginLeft: 'auto'
@@ -28,8 +20,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SearchBar = props => {
-  const { onFilter, onSearch, className, ...rest } = props;
+const CommentSummeryBtn = props => {
+  const { onFilter, className, ...rest } = props;
 
   const classes = useStyles();
 
@@ -51,12 +43,6 @@ const SearchBar = props => {
       spacing={3}
     >
       <Grid item>
-        <Search
-          className={classes.search}
-          onSearch={onSearch}
-        />
-      </Grid>
-      <Grid item>
         <Button
           className={classes.filterButton}
           color="primary"
@@ -64,29 +50,21 @@ const SearchBar = props => {
           size="small"
           variant="outlined"
         >
-          <FilterListIcon className={classes.filterIcon} /> Show filters
-        </Button>
-      </Grid>
-      <Grid item>
-        <AddSummeryBtn />
-      </Grid>
-
-      <Grid item>
-        <DateSelector />
-      </Grid>
-      <Filter
+                    Add Commnet Summery
+        </Button>{' '}
+      </Grid>{' '}
+      <CommentSummery
         onClose={handleFilterClose}
         onFilter={onFilter}
         open={openFilter}
-      />
+      />{' '}
     </Grid>
   );
 };
 
-SearchBar.propTypes = {
+CommentSummeryBtn.propTypes = {
   className: PropTypes.string,
-  onFilter: PropTypes.func,
-  onSearch: PropTypes.func
+  onFilter: PropTypes.func
 };
 
-export default SearchBar;
+export default CommentSummeryBtn;

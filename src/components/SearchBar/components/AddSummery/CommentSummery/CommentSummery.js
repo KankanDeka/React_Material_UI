@@ -83,28 +83,36 @@ const CommentSummery = props => {
 
 
   return (
-    <div>
+    <Drawer
+      anchor="right"
+      classes={{ paper: classes.drawer }}
+      onClose={onClose}
+      open={open}
+      variant="temporary"
+    >
       <div>
-        <CommentWritter/>
-      </div>
-      <div className={classes.header}>
-        <Button
-          onClick={onClose}
-          size="small"
-        >
-          <CloseIcon className={classes.buttonIcon} />
+        <div>
+          <CommentWritter/>
+        </div>
+        <div className={classes.header}>
+          <Button
+            onClick={onClose}
+            size="small"
+          >
+            <CloseIcon className={classes.buttonIcon} />
           Close
-        </Button>
+          </Button>
 
-        <Button
-          color="primary"
-          onClick={onClose}
-          size="small"
-        >
+          <Button
+            color="primary"
+            onClick={onClose}
+            size="small"
+          >
           Save
-        </Button>
+          </Button>
+        </div>
       </div>
-    </div>
+    </Drawer>
   );
 };
 

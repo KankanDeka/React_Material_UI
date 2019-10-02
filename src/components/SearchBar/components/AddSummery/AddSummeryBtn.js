@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Grid, Button } from '@material-ui/core';
-import FilterListIcon from '@material-ui/icons/FilterList';
+import AddIcon from '@material-ui/icons/Add';
 
 import AddSummery from './AddSummery'
 
@@ -57,7 +57,8 @@ const AddSummeryBtn = props => {
           size="small"
           variant="outlined"
         >
-        Add Summery
+          <AddIcon className={classes.buttonIcon} />
+          Add Summery
         </Button>
       </Grid>
       <AddSummery
