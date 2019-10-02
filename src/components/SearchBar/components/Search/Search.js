@@ -13,19 +13,19 @@ const useStyles = makeStyles(theme => ({
   search: {
     flexGrow: 1,
     height: 42,
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, 1),
     display: 'flex',
     alignItems: 'center'
   },
   searchIcon: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
     color: theme.palette.icon
   },
   searchInput: {
     flexGrow: 1
   },
   searchButton: {
-    marginLeft: theme.spacing(2)
+    marginLeft: theme.spacing(1)
   }
 }));
 
@@ -43,21 +43,21 @@ const Search = props => {
         className={classes.search}
         elevation={1}
       >
-        <SearchIcon className={classes.searchIcon} />
         <Input
           className={classes.searchInput}
           disableUnderline
           placeholder="Search"
         />
+        <Button
+          className={classes.searchButton}
+          onClick={onSearch}
+          size="small"
+          variant=""
+        >
+          <SearchIcon className={classes.searchIcon} />
+        </Button>
       </Paper>
-      <Button
-        className={classes.searchButton}
-        onClick={onSearch}
-        size="large"
-        variant="contained"
-      >
-        Search
-      </Button>
+
     </div>
   );
 };
