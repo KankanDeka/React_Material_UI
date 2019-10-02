@@ -1,26 +1,14 @@
+// eslint-disable-next-line
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import {
   Button,
-  Chip,
-  Collapse,
   Divider,
   Drawer,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-  Slider,
-  TextField,
-  Typography
 } from '@material-ui/core';
-import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import CloseIcon from '@material-ui/icons/Close';
-import DeleteIcon from '@material-ui/icons/DeleteOutlined';
-import AddIcon from '@material-ui/icons/Add';
 import CommentSummeryBtn from './CommentSummery/CommentSummeryBtn';
 import PostSummeryBtn from './PostSummery/PostSummeryBtn';
 
@@ -93,7 +81,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const AddSummery = props => {
-  const { open, onClose, onFilter, className, ...rest } = props;
+  const { open, onClose } = props;
 
   const classes = useStyles();
 

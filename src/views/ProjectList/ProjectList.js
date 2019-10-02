@@ -14,16 +14,6 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     flexWrap: 'wrap'
   },
-  DateSelector: {
-    flexGrow: 1,
-    marginTop: theme.spacing(3)
-  },
-  CommentSummeryBtn: {
-    marginRight: 'auto'
-  },
-  PostSummeryBtn: {
-    marginLeft: theme.spacing(1)
-  },
   results: {
     marginTop: theme.spacing(6)
   }
@@ -40,17 +30,11 @@ const ProjectList = () => {
       className={classes.root}
       title="Analytics"
     >
+
       <SearchBar
         onFilter={handleFilter}
         onSearch={handleSearch}
       />
-
-      {/* <DateSelector className={classes.DateSelector} />
-      <div>
-        <CommentSummeryBtn className={classes.CommentSummeryBtn} />
-      </div><div>
-        <PostSummeryBtn className={classes.PostSummeryBtn} />
-      </div> */}
       <div>
         <Results className={classes.results} />
       </div>

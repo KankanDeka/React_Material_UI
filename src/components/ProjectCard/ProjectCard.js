@@ -44,10 +44,17 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(0, 3, 1, 3),
     '& > * + *': {
       marginLeft: theme.spacing(1)
-    }
+    },
+    float: 'left',
+  },
+  Reactions:{
+    float: 'right',
   },
   learnMoreButton: {
     marginLeft: theme.spacing(2)
+  },
+  ReactionButton: {
+    margin: '1px',
   },
   likedButton: {
     color: colors.red[600]
@@ -126,92 +133,101 @@ const ProjectCard = props => {
               {tag.text}
             </Label>
           ))}
+
+          <div className={classes.Reactions}>
+            {project.media === 'Facebook' ?
+
+              <div className={classes.details}>
+                <Grid
+                  alignItems="center"
+                  container
+                  // justify="center"
+                  // spacing={3}
+                >
+                  <Grid item>
+                    <Typography>
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.LikeLogo}
+                        style={{ width: '20px', height: '20px' }}
+                      />
+                    </Typography>
+                    <Typography>
+                      {project.likeCount}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h5">
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.LoveLogo}
+                        style={{ width: '20px', height: '20px' }}
+                      />
+                    </Typography>
+                    <Typography>{project.LoveCount} </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h5">
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.HahaLogo}
+                        style={{ width: '20px', height: '20px' }}
+
+                      />
+                    </Typography>
+                    <Typography >{project.HahaCount}</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h5">
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.WowLogo}
+                        style={{ width: '20px', height: '20px' }}
+
+                      />
+                    </Typography>
+                    <Typography >{project.WowCount}</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h5">
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.SadLogo}
+                        style={{ width: '20px', height: '20px' }}
+
+                      />
+                    </Typography>
+                    <Typography >{project.SadCount}</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h5">
+                      <Avatar
+                        alt="Author"
+                        className={classes.ReactionButton}
+                        size="small"
+                        src={project.AngryLogo}
+                        style={{ width: '20px', height: '20px' }}
+
+                      />
+                    </Typography>
+                    <Typography >{project.AngryCount}</Typography>
+                  </Grid>
+                </Grid>
+              </div>
+              : null}
+          </div>
         </div>
-
-        <div >
-          {project.media === 'Facebook' ?
-
-            <div className={classes.details}>
-              <Grid
-                alignItems="center"
-                container
-                justify="space-between"
-                spacing={3}
-              >
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.LikeLogo}
-                      style={{width: '20px', height: '20px'}}
-                    />
-                  </Typography>
-                  <Typography variant="body2">
-                    {project.likeCount} Likes
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.LoveLogo}
-                    />
-                  </Typography>
-                  <Typography variant="body2">{project.LoveCount} Loves </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.HahaLogo}
-                    />
-                  </Typography>
-                  <Typography variant="body2">{project.HahaCount} Ha Ha</Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.WowLogo}
-                    />
-                  </Typography>
-                  <Typography variant="body2">{project.WowCount} Wow</Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.SadLogo}
-                    />
-                  </Typography>
-                  <Typography variant="body2">{project.SadCount} Sad</Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="h5">
-                    <Avatar
-                      alt="Author"
-                      className={classes.likeButton}
-                      size="small"
-                      src={project.AngryLogo}
-                    />
-                  </Typography>
-                  <Typography variant="body2">{project.AngryCount} Angry</Typography>
-                </Grid>
-              </Grid>
-            </div>
-            : null}
-
-        </div>
+        
         <Divider />
         <div className={classes.details}>
           <Grid
@@ -293,7 +309,7 @@ const ProjectCard = props => {
                 </Button>
               </Typography>
             </Grid>
-            
+
           </Grid>
         </div>
       </CardContent>

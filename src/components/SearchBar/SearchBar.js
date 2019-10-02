@@ -5,15 +5,15 @@ import { makeStyles } from '@material-ui/styles';
 import { Grid, Button } from '@material-ui/core';
 import FilterListIcon from '@material-ui/icons/FilterList';
 
-import { Search, Filter, DateSelector } from './components';
-import AddSummeryBtn from './components/AddSummery/AddSummeryBtn'
+import { Search, Filter, DateSelector, AddSummeryBtn } from './components';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    // justifyContent: 'space-between',
+    flexWrap: 'wrap',
   },
   search: {
     flexGrow: 1,
@@ -70,8 +70,7 @@ const SearchBar = props => {
       <Grid item>
         <AddSummeryBtn />
       </Grid>
-
-      <Grid item>
+      <Grid>
         <DateSelector />
       </Grid>
       <Filter
@@ -79,6 +78,7 @@ const SearchBar = props => {
         onFilter={onFilter}
         open={openFilter}
       />
+
     </Grid>
   );
 };
