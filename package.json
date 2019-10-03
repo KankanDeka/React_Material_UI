@@ -1,11 +1,14 @@
 {
-  "name": "devias-material-kit-pro",
+  "homepage": "https://kankandeka.github.io/React_Material_UI/",
+  "name": "react-material-ui",
   "author": "DeviasIO",
   "email": "contact@devias.io",
   "licence": "UNLICENSED",
   "version": "1.2.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,6 +49,7 @@
     "chart.js": "^2.7.3",
     "clsx": "^1.0.4",
     "draft-js": "^0.11.0",
+    "gh-pages": "^2.1.1",
     "history": "^4.7.2",
     "immutable": "^4.0.0-rc.12",
     "js-cookie": "^2.2.0",
