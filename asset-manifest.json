@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/React_Material_UI/static/css/main.cde9bc90.chunk.css",
+    "main.js": "/React_Material_UI/static/js/main.027e22c2.chunk.js",
+    "main.js.map": "/React_Material_UI/static/js/main.027e22c2.chunk.js.map",
+    "runtime~main.js": "/React_Material_UI/static/js/runtime~main.7a34df71.js",
+    "runtime~main.js.map": "/React_Material_UI/static/js/runtime~main.7a34df71.js.map",
+    "static/css/2.04b26184.chunk.css": "/React_Material_UI/static/css/2.04b26184.chunk.css",
+    "static/js/2.72f6665b.chunk.js": "/React_Material_UI/static/js/2.72f6665b.chunk.js",
+    "static/js/2.72f6665b.chunk.js.map": "/React_Material_UI/static/js/2.72f6665b.chunk.js.map",
+    "index.html": "/React_Material_UI/index.html",
+    "precache-manifest.aaccc44ac1b2cb488cabd089ddd7f81c.js": "/React_Material_UI/precache-manifest.aaccc44ac1b2cb488cabd089ddd7f81c.js",
+    "service-worker.js": "/React_Material_UI/service-worker.js",
+    "static/css/2.04b26184.chunk.css.map": "/React_Material_UI/static/css/2.04b26184.chunk.css.map",
+    "static/css/main.cde9bc90.chunk.css.map": "/React_Material_UI/static/css/main.cde9bc90.chunk.css.map"
+  }
+}
